@@ -56,7 +56,8 @@ class SawyerDrawerOpenEnvV2(SawyerXYZEnv):
             'goalDist': pullDist,
             'epRew': reward,
             'pickRew': None,
-            'success': float(pullDist <= 0.03),
+            #'success': float(pullDist <= 0.03),
+            'success': float(pullDist <= 0.06),
         }
 
         return ob, reward, False, info

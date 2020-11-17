@@ -6,6 +6,7 @@
       <material name="drawer_red" rgba="0.19 0.38 0.2 1" shininess="1" reflectance=".7" specular=".5"/>
       <material name="drawer_white" rgba=".75 .75 .75 1" shininess="1" reflectance=".7" specular=".5"/>
       <material name="drawer_beige" rgba=".4 .65 .4 1" shininess="1" reflectance="1" specular=".5"/>
+      <material name="drawer_black" rgba=".25 .25 .25 1" shininess="1" reflectance="1" specular=".5"/>
 
     </asset>
     <default>

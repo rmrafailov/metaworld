@@ -56,7 +56,7 @@ class SawyerDoorEnvV2(SawyerXYZEnv):
             'goalDist': pullDist,
             'epRew': reward,
             'pickRew': None,
-            'success': float(pullDist <= 0.08)
+            'success': float(pullDist <= 0.15)
         }
 
         return ob, reward, False, info
@@ -78,7 +78,8 @@ class SawyerDoorEnvV2(SawyerXYZEnv):
 
         self.obj_init_pos = self._get_state_rand_vec() if self.random_init \
             else self.init_config['obj_init_pos']
-        self._target_pos = self.obj_init_pos + np.array([-0.3, -0.45, 0.])
+#        self._target_pos = self.obj_init_pos + np.array([-0.3, -0.45, 0.])
+        self._target_pos = self.obj_init_pos + np.array([0.3, -0.45, 0.])
 
         self.sim.model.body_pos[self.model.body_name2id('door')] = self.obj_init_pos
         self.sim.model.site_pos[self.model.site_name2id('goal')] = self._target_pos
